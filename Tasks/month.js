@@ -19,9 +19,10 @@ const Months = [
 ];
 
 const Month = (s) => {
-  const l = Months.length;
-  for (let i = 0; i < l; i++) {
-    if (s.toLowerCase().startsWith(Months[i])) return i + 1;
+  for (const i of Months) {
+    if (s.toLowerCase().startsWith(i)) {
+      return Months.indexOf(i) + 1;
+    }
   }
   return -1;
 };
