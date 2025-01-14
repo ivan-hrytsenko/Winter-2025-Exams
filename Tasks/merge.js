@@ -3,6 +3,6 @@
 
 'use strict';
 
-const merge_two_objects = (object_1, object_2) => ({ ...object_1, ...object_2 });
+const mergeTwoObjects = (object1, object2) => ({ ...object1, ...object2 });
 
-module.exports = merge_two_objects;
+module.exports = mergeTwoObjects;
