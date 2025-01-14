@@ -3,7 +3,7 @@
 
 'use strict';
 
-const Months = [
+const MONTHS = [
   'jan',
   'feb',
   'mar',
@@ -18,13 +18,13 @@ const Months = [
   'dec',
 ];
 
-const Month = (s) => {
-  for (const i of Months) {
-    if (s.toLowerCase().startsWith(i)) {
-      return Months.indexOf(i) + 1;
+const getMonthName = (name) => {
+  for (const shortName of MONTHS) {
+    if (name.toLowerCase().startsWith(shortName)) {
+      return MONTHS.indexOf(shortName) + 1;
     }
   }
   return -1;
 };
 
-module.exports = Month;
+module.exports = getMonthName;
