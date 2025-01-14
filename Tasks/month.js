@@ -19,11 +19,14 @@ const MONTHS = [
 ];
 
 const getMonthName = (name) => {
+  const lowercaseName = name.toLowerCase();
+
   for (const shortName of MONTHS) {
-    if (name.toLowerCase().startsWith(shortName)) {
+    if (lowercaseName.startsWith(shortName)) {
       return MONTHS.indexOf(shortName) + 1;
     }
   }
+
   return -1;
 };
 
